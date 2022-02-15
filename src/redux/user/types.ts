@@ -1,13 +1,16 @@
 export interface GetProfileRequestPayload {
-  id: UserGlobal.Profile['id']
+  id: UserGlobal.Profile["id"];
 }
 
 export interface GetProfileSuccessPayload {
-  profile: UserGlobal.Profile
+  profile: UserGlobal.Profile;
 }
 
 export interface GetProfileFailurePayload {
-  errors: Errors
+  errors: Errors;
 }
 
-export type Payload = GetProfileRequestPayload | GetProfileSuccessPayload | GetProfileFailurePayload
+export type Payload =
+  | GetProfileRequestPayload
+  | GetProfileSuccessPayload
+  | GetProfileFailurePayload;

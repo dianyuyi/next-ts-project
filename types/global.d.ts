@@ -1,1 +1,1 @@
-type Errors = string[]
+type Errors = string[];

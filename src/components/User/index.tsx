@@ -1,9 +1,9 @@
 import React, { FC, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getProfileRequest } from "src/redux/user/actions";
-import ProfileCard from "src/components/ProfileCard";
+import Profile from "./Profile";
 
-const UserInfo: FC = () => {
+const User: FC = () => {
   const user = useSelector((state: Store.RootState) => state.user);
   const dispatch = useDispatch();
 
@@ -14,10 +14,10 @@ const UserInfo: FC = () => {
   }, []);
 
   return (
-    <div>
-      <ProfileCard profile={user.profile} />
-    </div>
+    <>
+      <Profile profile={user.profile} isLoading={user.isLoading} />
+    </>
   );
 };
 
-export default UserInfo;
+export default User;

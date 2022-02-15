@@ -1,6 +1,7 @@
 declare namespace Store {
   interface State {
-    user: UserGlobal.UserState
+    user: UserGlobal.UserState;
+    item: ItemGlobal.ItemState;
   }
-  type RootState = State
+  type RootState = State;
 }
