@@ -4,7 +4,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import tw from 'twin.macro'
-import Button from '../components/Button'
+import Button from '../src/components/Button'
 
 const testStyles = {
   // Move long class sets out of jsx to keep it scannable
