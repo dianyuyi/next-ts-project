@@ -12,7 +12,6 @@ const Item: FC = () => {
       dispatch(getItemRequest({ id: "m12665837286" }));
     }
   }, []);
-  console.log(item)
 
   return (
     <>

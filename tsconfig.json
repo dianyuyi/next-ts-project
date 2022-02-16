@@ -5,7 +5,7 @@
       "src/*": ["src/*"],
       "server/*": ["server/*"]
     },
-    "target": "es5",
+    "target": "es6",
     "module": "esnext",
     "strict": false,
     "allowJs": true,
