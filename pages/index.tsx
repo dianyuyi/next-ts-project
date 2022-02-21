@@ -1,11 +1,11 @@
-import React from 'react'
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import tw from 'twin.macro'
-import Button from '../src/components/Button'
-import Link from 'next/link'
+import React from 'react';
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Image from 'next/image';
+import styles from '../styles/Home.module.css';
+import tw from 'twin.macro';
+import Button from '../src/components/Button';
+import Link from 'next/link';
 
 const testStyles = {
   // Move long class sets out of jsx to keep it scannable
@@ -13,7 +13,7 @@ const testStyles = {
     tw`flex flex-col items-center justify-center h-screen`,
     hasBackground && tw`bg-gradient-to-b from-gray-50 to-gray-200`,
   ],
-}
+};
 
 const Home: NextPage = () => {
   return (
@@ -38,7 +38,7 @@ const Home: NextPage = () => {
         </Link>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

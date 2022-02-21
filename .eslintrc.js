@@ -10,7 +10,7 @@ module.exports = {
     "plugin:react/recommended",
     "plugin:import/typescript",
     "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended",
+    "prettier/react",
   ],
   settings: {
     "import/resolver": {

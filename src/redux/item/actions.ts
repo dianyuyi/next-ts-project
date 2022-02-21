@@ -35,7 +35,9 @@ export const getItemRequest = (id: GetItemRequestPayload): ItemAction => ({
   payload: id,
 });
 
-export const getItemSuccess = (productItem: GetItemSuccessPayload): ItemAction => ({
+export const getItemSuccess = (
+  productItem: GetItemSuccessPayload
+): ItemAction => ({
   type: actionTypes.GET_ITEM_SUCCESS,
   payload: productItem,
 });

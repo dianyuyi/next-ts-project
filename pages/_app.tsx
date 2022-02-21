@@ -1,14 +1,15 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
-import React, { FC } from 'react'
+import '../styles/globals.css';
+import type { AppProps } from 'next/app';
+import React, { FC } from 'react';
 //import { wrapper } from '../store';
-import { wrapper } from 'src/redux'
-import GlobalStyles from 'src/components/GlobalStyles'
+import { wrapper } from 'src/redux';
+import GlobalStyles from 'src/components/GlobalStyles';
+import Layout from 'src/components/common/Layout';
 
 const WrappedApp: FC<AppProps> = ({ Component, pageProps }) => (
-  <>
+  <Layout>
     <GlobalStyles />
     <Component {...pageProps} />
-  </>
-)
-export default wrapper.withRedux(WrappedApp)
+  </Layout>
+);
+export default wrapper.withRedux(WrappedApp);
