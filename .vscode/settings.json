@@ -7,14 +7,12 @@
   },
   "editor.formatOnSave": true,
   "editor.tabSize": 2,
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact"
-  ],
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true,
     "source.fixAll.stylelint": true
-  }
+  },
+  "eslint.workingDirectories": [
+    "./{PATH_TO_CLIENT}" // replace {PATH_TO_CLIENT} with you own path
+  ]
 }

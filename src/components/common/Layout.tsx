@@ -1,5 +1,5 @@
-import React, { FC } from "react";
-import Meta from "./Meta";
+import React, { FC } from 'react'
+import Meta from './Meta'
 
 const Layout: FC = ({ children }) => {
   return (
@@ -9,7 +9,7 @@ const Layout: FC = ({ children }) => {
         <main>{children}</main>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout

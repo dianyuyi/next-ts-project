@@ -1,16 +1,13 @@
 export interface GetItemRequestPayload {
-  id: ItemGlobal.Item["id"];
+  id: ItemGlobal.Item['id']
 }
 
 export interface GetItemSuccessPayload {
-  productItem: ItemGlobal.Item;
+  productItem: ItemGlobal.Item
 }
 
 export interface GetItemFailurePayload {
-  errors: Errors;
+  errors: Errors
 }
 
-export type Payload =
-  | GetItemRequestPayload
-  | GetItemSuccessPayload
-  | GetItemFailurePayload;
+export type Payload = GetItemRequestPayload | GetItemSuccessPayload | GetItemFailurePayload

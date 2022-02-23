@@ -1,4 +1,4 @@
-import tw, { styled, css, theme } from "twin.macro";
+import tw, { styled, css, theme } from 'twin.macro'
 
 const Button = styled.button(({ variant, isSmall }) => [
   // The common button styles added with the tw import
@@ -8,10 +8,10 @@ const Button = styled.button(({ variant, isSmall }) => [
   tw`hocus:(scale-105 text-yellow-400)`,
 
   // Use props to conditionally style your components
-  variant === "primary" && tw`bg-black text-white border-black`,
+  variant === 'primary' && tw`bg-black text-white border-black`,
 
   // Combine regular css with tailwind classes within backticks
-  variant === "secondary" && [
+  variant === 'secondary' && [
     css`
       box-shadow: 0 0.1em 0 0 rgba(0, 0, 0, 0.25);
     `,
@@ -25,6 +25,6 @@ const Button = styled.button(({ variant, isSmall }) => [
   css`
     color: ${theme`colors.white`};
   `,
-]);
+])
 
-export default Button;
+export default Button

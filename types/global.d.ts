@@ -1,1 +1,1 @@
-type Errors = string[] | unknown;
+type Errors = string[] | unknown

@@ -1,10 +1,10 @@
-import React, { FC } from "react";
-import Head from "next/head";
+import React, { FC } from 'react'
+import Head from 'next/head'
 
 interface Props {
-  title: MetaGlobal.title | null;
-  keywords: MetaGlobal.keywords | null;
-  description: MetaGlobal.description | null;
+  title: MetaGlobal.title | null
+  keywords: MetaGlobal.keywords | null
+  description: MetaGlobal.description | null
 }
 
 const Meta: FC<Props> = ({ title, keywords, description }) => {
@@ -17,12 +17,12 @@ const Meta: FC<Props> = ({ title, keywords, description }) => {
       <link rel="icon" href="/favicon.ico" />
       <title>{title}</title>
     </Head>
-  );
-};
+  )
+}
 
 Meta.defaultProps = {
-  title: "WebDev Newz",
-  keywords: "web development, programming",
-  description: "Get the latest news in web dev",
-};
-export default Meta;
+  title: 'WebDev Newz',
+  keywords: 'web development, programming',
+  description: 'Get the latest news in web dev',
+}
+export default Meta
