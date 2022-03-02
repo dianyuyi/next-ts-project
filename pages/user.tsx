@@ -8,7 +8,7 @@ const UserPage: NextPage = () => {
   const { t } = useTranslation()
   return (
     <div>
-      <Title>{t('user.title')}</Title>
+      <Title>{t('work.outer_link')}</Title>
       <User />
     </div>
   )
