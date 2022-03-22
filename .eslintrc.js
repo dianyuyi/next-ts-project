@@ -10,6 +10,7 @@ module.exports = {
     'plugin:import/typescript',
     'plugin:@typescript-eslint/recommended',
     'prettier',
+    'plugin:jest/recommended',
     'plugin:prettier/recommended',
   ],
   settings: {
@@ -31,7 +32,7 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: ['react', '@typescript-eslint', 'prettier', 'react-hooks', 'unicorn'],
+  plugins: ['react', '@typescript-eslint', 'prettier', 'react-hooks', 'unicorn', 'jest'],
   rules: {
     semi: 0,
     indent: 0,
