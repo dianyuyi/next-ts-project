@@ -10,7 +10,7 @@ module.exports = {
     '^pages(.*)$': '<rootDir>/pages$1',
   },
   transform: {
-    '^.+\\.[tj]sx?$': 'babel-jest',
+    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
   },
   collectCoverageFrom: [
     './{src,pages,server}/**/*.{ts,tsx,js,jsx}',
