@@ -16,7 +16,7 @@ const testStyles = {
   ],
 }
 
-const Home: NextPage = ({ data }) => {
+const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
@@ -28,7 +28,7 @@ const Home: NextPage = ({ data }) => {
       <div css={testStyles.container({ hasBackground: true })}>
         <div tw="flex flex-col justify-center h-10 gap-y-5">
           <p>Test</p>
-          {/* {JSON.stringify(data)} */}
+          {/* {JSON.stringify(data[1])} */}
           {/* <p>Test2</p> */}
         </div>
         <Button variant="primary">Submit</Button>
@@ -42,13 +42,15 @@ const Home: NextPage = ({ data }) => {
     </div>
   )
 }
-export async function getStaticProps() {
-  const data = await getSheetList()
-  return {
-    props: {
-      data: data, // remove sheet header
-    },
-  }
-}
+// export async function getStaticProps() {
+//   const sheetName = 'Sheet1'
+//   const data = await getSheetList(sheetName)
+//   console.log(data[9])
+//   return {
+//     props: {
+//       data: data, // remove sheet header
+//     },
+//   }
+// }
 
 export default Home

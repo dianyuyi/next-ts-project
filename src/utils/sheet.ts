@@ -1,5 +1,6 @@
 import { google } from 'googleapis'
-export async function getSheetList() {
+
+export async function getSheetList(sheetName: string) {
   try {
     const target = ['https://www.googleapis.com/auth/spreadsheets.readonly']
     const jwt = new google.auth.JWT(
@@ -12,22 +13,24 @@ export async function getSheetList() {
     const sheets = google.sheets({ version: 'v4', auth: jwt })
     const response = await sheets.spreadsheets.values.get({
       spreadsheetId: process.env.SPREADSHEET_ID,
-      range: 'Sheet1', // sheet name
+      range: sheetName, // sheet name
     })
 
     const rows = response.data.values
     if (rows.length) {
-      // return rows.map(row => ({
-      //   title: row[2],
-      //   subtitle: row[3],
-      //   code: row[4],
-      //   browser: row[5],
-      //   short_name: row[17],
-      //   emojipedia_slug: row[18],
-      //   descriptions: row[19],
-      // }))
-      // console.log('rows?', rows)
-      return rows
+      return rows.map(row => ({
+        id: row[0],
+        name_tw: row[1],
+        name_en: row[2],
+        image: row[3],
+        image_webp: row[4] ?? '',
+        thumb: row[5] ?? '',
+        tags: row[6],
+        date: row[7],
+        description_tw: row[8],
+        description_en: row[9],
+        url: row[10] ?? '',
+      }))
     }
   } catch (err) {
     console.log(err)

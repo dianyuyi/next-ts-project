@@ -15,8 +15,11 @@
     }
   },
   "dependencies": {
+    "@babel/preset-env": "^7.16.11",
     "antd": "^4.18.7",
     "axios": "^0.24.0",
+    "fs": "^0.0.1-security",
+    "google-auth-library": "^7.14.1",
     "googleapis": "^99.0.0",
     "next": "^12.0.10",
     "next-redux-wrapper": "^6.0.2",
